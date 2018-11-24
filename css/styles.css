@@ -1,0 +1,205 @@
+body, html {
+  height: 100%;
+  font-family: Garamond;
+  margin: 0;
+  padding: 0;
+}
+
+/************************** Text Elements **************************/
+h1, h2, h3, p, ul {
+  line-height: 1.5;
+  text-align: left;
+  margin: 20px;
+  color: black;
+  width: 100%;
+  font-weight: 200;
+}
+
+h1, h2, h3 {
+  font-family: Helvetica;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
+ul {
+  width: 80%;
+  /* needed to wrap for mobile */
+}
+
+/************************** Mobile nav **************************/
+#navMobile {
+  background-color: black;
+  padding: 10px;
+  display: block;
+}
+
+#burger {
+  color: white;
+  cursor: pointer;
+}
+
+.fa-times-circle:before {
+  color: white;
+}
+
+.fa-bars:before {
+  margin: 0 1em;
+  color: white;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  font-size: 110%;
+}
+
+#navMobileContainer ul {
+  list-style-type: none;
+  font-size: 2em;
+  padding: 5%;
+}
+
+#navMobileContainer {
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+#close-button {
+  float: right;
+  padding: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+#navMobileContainer a {
+  color: white;
+  padding: 0 10px;
+}
+
+#navMobileContainer a:hover {
+  border-left: 3px solid white;
+}
+
+.activeNavMobile {
+  border-left: 3px solid white;
+  font-weight: 600;
+}
+
+/************************** Tablet/Desktop Nav **************************/
+#navFlexContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  background: black;
+}
+
+.navItem {
+  color: #8c8e93;
+}
+
+.navItem:hover {
+  font-size: 110%;
+  color: #d1d2d4;
+  border-bottom: 3px solid white;
+}
+
+.navItem:active {
+  color: white;
+  font-weight: 600;
+}
+
+.activeNavDesktop {
+  color: white;
+  border-bottom: 3px solid white;
+  font-weight: 600;
+  font-size: 110%;
+}
+
+/************************** Essentials **************************/
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  min-height: 75%;
+  width: 100%;
+}
+
+/************************** Responsiveness **************************/
+/* for mobile when width is larger than 0 */
+@media only screen and (min-width:0) {
+  #navFlexContainer {
+    display: none;
+  }
+}
+
+/* for tablet when width is larger than 37.5em */
+@media only screen and (min-width:37.5em) {
+  body {
+    font-size: 108%;
+  }
+
+  #navFlexContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav a {
+    margin: auto;
+    text-align: center;
+    padding: 0.2em;
+  }
+
+  .navItem {
+    padding: 25px;
+  }
+
+  #navMobile {
+    display: none;
+  }
+}
+
+/* for desktop when width is larger than 60em */
+@media only screen and (min-width:60em) {
+  body {
+    font-size: 115%;
+  }
+
+  #navMobile {
+    display: none;
+  }
+
+  #navFlexContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav a {
+    margin: auto;
+    text-align: center;
+    padding: 0.2em;
+  }
+
+  .navItem {
+    padding: 25px;
+  }
+}
