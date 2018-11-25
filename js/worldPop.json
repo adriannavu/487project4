@@ -1,0 +1,202 @@
+[
+  {
+    "Year": 0,
+    "Population": 188.2
+  },
+  {
+    "Year": 100,
+    "Population": 195.06
+  },
+  {
+    "Year": 200,
+    "Population": 202.31
+  },
+  {
+    "Year": 300,
+    "Population": 205.32
+  },
+  {
+    "Year": 400,
+    "Population": 208.91
+  },
+  {
+    "Year": 500,
+    "Population": 210.43
+  },
+  {
+    "Year": 600,
+    "Population": 212.64
+  },
+  {
+    "Year": 700,
+    "Population": 225.84
+  },
+  {
+    "Year": 800,
+    "Population": 240.49
+  },
+  {
+    "Year": 900,
+    "Population": 268.75
+  },
+  {
+    "Year": 1000,
+    "Population": 295.04
+  },
+  {
+    "Year": 1100,
+    "Population": 352.61
+  },
+  {
+    "Year": 1200,
+    "Population": 393.08
+  },
+  {
+    "Year": 1300,
+    "Population": 392.4
+  },
+  {
+    "Year": 1400,
+    "Population": 389.77
+  },
+  {
+    "Year": 1500,
+    "Population": 461.37
+  },
+  {
+    "Year": 1600,
+    "Population": 553.96
+  },
+  {
+    "Year": 1700,
+    "Population": 603.17
+  },
+  {
+    "Year": 1710,
+    "Population": 634.82
+  },
+  {
+    "Year": 1720,
+    "Population": 656.33
+  },
+  {
+    "Year": 1730,
+    "Population": 670.12
+  },
+  {
+    "Year": 1740,
+    "Population": 755.23
+  },
+  {
+    "Year": 1750,
+    "Population": 813.66
+  },
+  {
+    "Year": 1760,
+    "Population": 839.65
+  },
+  {
+    "Year": 1770,
+    "Population": 861.91
+  },
+  {
+    "Year": 1780,
+    "Population": 951.03
+  },
+  {
+    "Year": 1790,
+    "Population": 987.94
+  },
+  {
+    "Year": 1800,
+    "Population": 989.82
+  },
+  {
+    "Year": 1810,
+    "Population": 1060.58
+  },
+  {
+    "Year": 1820,
+    "Population": 1089.65
+  },
+  {
+    "Year": 1830,
+    "Population": 1159.14
+  },
+  {
+    "Year": 1840,
+    "Population": 1212.23
+  },
+  {
+    "Year": 1850,
+    "Population": 1262.68
+  },
+  {
+    "Year": 1860,
+    "Population": 1289.17
+  },
+  {
+    "Year": 1870,
+    "Population": 1331.45
+  },
+  {
+    "Year": 1880,
+    "Population": 1419.6
+  },
+  {
+    "Year": 1890,
+    "Population": 1538.92
+  },
+  {
+    "Year": 1900,
+    "Population": 1654.43
+  },
+  {
+    "Year": 1910,
+    "Population": 1777.18
+  },
+  {
+    "Year": 1920,
+    "Population": 1912.11
+  },
+  {
+    "Year": 1930,
+    "Population": 2091.89
+  },
+  {
+    "Year": 1940,
+    "Population": 2307.35
+  },
+  {
+    "Year": 1950,
+    "Population": 2536.27
+  },
+  {
+    "Year": 1960,
+    "Population": 3033.21
+  },
+  {
+    "Year": 1970,
+    "Population": 3700.58
+  },
+  {
+    "Year": 1980,
+    "Population": 4458.41
+  },
+  {
+    "Year": 1990,
+    "Population": 5330.94
+  },
+  {
+    "Year": 2000,
+    "Population": 6145.01
+  },
+  {
+    "Year": 2010,
+    "Population": 6958.17
+  },
+  {
+    "Year": "Today",
+    "Population": 7667.96
+  }
+]
