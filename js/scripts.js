@@ -10,7 +10,7 @@ var container = document.getElementById('container');
 burger.addEventListener('click', function() {
   console.log('burger clicked');
   navMobileContainer.style.width = '100%';
-  navMobileContainer.style.height = '70%';
+  navMobileContainer.style.height = '55%';
   navMobileContainer.style.transition = '0.5s ease';
   container.style.opacity = '0.3';
 });
@@ -24,85 +24,91 @@ closeBtn.addEventListener('click', function() {
 
 //document.getElementsByClassName returns an array of elements, so you must target a specific index of them
 //mobile
-var essentialsNavM = document.getElementsByClassName('essentialsNav')[0];
+var essenNavM = document.getElementsByClassName('essenNav')[0];
 var popGrowthNavM = document.getElementsByClassName('popGrowthNav')[0];
-var urbanizationNavM = document.getElementsByClassName('urbanizationNav')[0];
-var consumptionNavM = document.getElementsByClassName('consumptionNav')[0];
-var solutionsNavM = document.getElementsByClassName('solutionsNav')[0];
+var urbanNavM = document.getElementsByClassName('urbanNav')[0];
+var consumNavM = document.getElementsByClassName('consumNav')[0];
+var solnsNavM = document.getElementsByClassName('solnsNav')[0];
 //desktop
-var essentialsNavD = document.getElementsByClassName('essentialsNav')[1];
+var essenNavD = document.getElementsByClassName('essenNav')[1];
 var popGrowthNavD = document.getElementsByClassName('popGrowthNav')[1];
-var urbanizationNavD = document.getElementsByClassName('urbanizationNav')[1];
-var consumptionNavD = document.getElementsByClassName('consumptionNav')[1];
-var solutionsNavD = document.getElementsByClassName('solutionsNav')[1];
+var urbanNavD = document.getElementsByClassName('urbanNav')[1];
+var consumNavD = document.getElementsByClassName('consumNav')[1];
+var solnsNavD = document.getElementsByClassName('solnsNav')[1];
 
 function remActiveNavMobile() {
-  if (essentialsNavM.classList.contains('activeNavMobile')) {
-    essentialsNavM.classList.remove('activeNavMobile');
+  if (essenNavM.classList.contains('activeNavMobile')) {
+    essenNavM.classList.remove('activeNavMobile');
   } else if (popGrowthNavM.classList.contains('activeNavMobile')) {
     popGrowthNavM.classList.remove('activeNavMobile');
-  } else if (urbanizationNavM.classList.contains('activeNavMobile')) {
-    urbanizationNavM.classList.remove('activeNavMobile');
-  } else if (consumptionNavM.classList.contains('activeNavMobile')) {
-    consumptionNavM.classList.remove('activeNavMobile');
-  } else if (solutionsNavM.classList.contains('activeNavMobile')) {
-    solutionsNavM.classList.remove('activeNavMobile');
+  } else if (urbanNavM.classList.contains('activeNavMobile')) {
+    urbanNavM.classList.remove('activeNavMobile');
+  } else if (consumNavM.classList.contains('activeNavMobile')) {
+    consumNavM.classList.remove('activeNavMobile');
+  } else if (solnsNavM.classList.contains('activeNavMobile')) {
+    solnsNavM.classList.remove('activeNavMobile');
   }
 } //close remActiveNavMobile
 
 function remActiveNavDesktop() {
-  if (essentialsNavD.classList.contains('activeNavDesktop')) {
-    essentialsNavD.classList.remove('activeNavDesktop');
+  if (essenNavD.classList.contains('activeNavDesktop')) {
+    essenNavD.classList.remove('activeNavDesktop');
   } else if (popGrowthNavD.classList.contains('activeNavDesktop')) {
     popGrowthNavD.classList.remove('activeNavDesktop');
-  } else if (urbanizationNavD.classList.contains('activeNavDesktop')) {
-    urbanizationNavD.classList.remove('activeNavDesktop');
-  } else if (consumptionNavD.classList.contains('activeNavDesktop')) {
-    consumptionNavD.classList.remove('activeNavDesktop');
-  } else if (solutionsNavD.classList.contains('activeNavDesktop')) {
-    solutionsNavD.classList.remove('activeNavDesktop');
+  } else if (urbanNavD.classList.contains('activeNavDesktop')) {
+    urbanNavD.classList.remove('activeNavDesktop');
+  } else if (consumNavD.classList.contains('activeNavDesktop')) {
+    consumNavD.classList.remove('activeNavDesktop');
+  } else if (solnsNavD.classList.contains('activeNavDesktop')) {
+    solnsNavD.classList.remove('activeNavDesktop');
   }
 } //close remActiveNavDesktop
 
-essentialsNavM.addEventListener('click', function() {
-  console.log('essentialsNavM clicked');
-  remActiveNavMobile();
-  essentialsNavM.classList.add('activeNavMobile');
+function closeNavMobileContainer() {
   container.style.opacity = '1';
+  navMobileContainer.style.width = '0%';
+  navMobileContainer.style.transition = '0.5s ease';
+} //close closeNavMobileContainer
+
+essenNavM.addEventListener('click', function() {
+  console.log('essenNavM clicked');
+  remActiveNavMobile();
+  this.classList.add('activeNavMobile');
+  closeNavMobileContainer();
 });
 
 popGrowthNavM.addEventListener('click', function() {
   console.log('popGrowthNavM clicked');
   remActiveNavMobile();
-  popGrowthNavM.classList.add('activeNavMobile');
-  container.style.opacity = '1';
+  this.classList.add('activeNavMobile');
+  closeNavMobileContainer();
 });
 
-urbanizationNavM.addEventListener('click', function() {
-  console.log('urbanizationNavM clicked');
+urbanNavM.addEventListener('click', function() {
+  console.log('urbanNavM clicked');
   remActiveNavMobile();
-  urbanizationNavM.classList.add('activeNavMobile');
-  container.style.opacity = '1';
+  this.classList.add('activeNavMobile');
+  closeNavMobileContainer();
 });
 
-consumptionNavM.addEventListener('click', function() {
-  console.log('consumptionNavM clicked');
+consumNavM.addEventListener('click', function() {
+  console.log('consumNavM clicked');
   remActiveNavMobile();
-  consumptionNavM.classList.add('activeNavMobile');
-  container.style.opacity = '1';
+  this.classList.add('activeNavMobile');
+  closeNavMobileContainer();
 });
 
-solutionsNavM.addEventListener('click', function() {
-  console.log('solutionsNavM clicked');
+solnsNavM.addEventListener('click', function() {
+  console.log('solnsNavM clicked');
   remActiveNavMobile();
-  solutionsNavM.classList.add('activeNavMobile');
-  container.style.opacity = '1';
+  this.classList.add('activeNavMobile');
+  closeNavMobileContainer();
 });
 
-essentialsNavD.addEventListener('click', function() {
-  console.log('essentialsNavD clicked');
+essenNavD.addEventListener('click', function() {
+  console.log('essenNavD clicked');
   remActiveNavDesktop();
-  essentialsNavD.classList.add('activeNavDesktop');
+  essenNavD.classList.add('activeNavDesktop');
   container.style.opacity = '1';
 });
 
@@ -113,24 +119,24 @@ popGrowthNavD.addEventListener('click', function() {
   container.style.opacity = '1';
 });
 
-urbanizationNavD.addEventListener('click', function() {
-  console.log('urbanizationNavD clicked');
+urbanNavD.addEventListener('click', function() {
+  console.log('urbanNavD clicked');
   remActiveNavDesktop();
-  urbanizationNavD.classList.add('activeNavDesktop');
+  urbanNavD.classList.add('activeNavDesktop');
   container.style.opacity = '1';
 });
 
-consumptionNavD.addEventListener('click', function() {
-  console.log('consumptionNavD clicked');
+consumNavD.addEventListener('click', function() {
+  console.log('consumNavD clicked');
   remActiveNavDesktop();
-  consumptionNavD.classList.add('activeNavDesktop');
+  consumNavD.classList.add('activeNavDesktop');
   container.style.opacity = '1';
 });
 
-solutionsNavD.addEventListener('click', function() {
-  console.log('solutionsNavD clicked');
+solnsNavD.addEventListener('click', function() {
+  console.log('solnsNavD clicked');
   remActiveNavDesktop();
-  solutionsNavD.classList.add('activeNavDesktop');
+  solnsNavD.classList.add('activeNavDesktop');
   container.style.opacity = '1';
 });
 

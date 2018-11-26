@@ -3,17 +3,15 @@ body, html {
   font-family: Garamond;
   margin: 0;
   padding: 0;
-}
-
-#container {
-  margin: 0 10%;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /************************** Text Elements **************************/
 h1, h2, h3, p, ul {
   line-height: 1.5;
   text-align: left;
-  margin: 20px;
   color: black;
   width: 100%;
   font-weight: 200;
@@ -83,8 +81,7 @@ nav a:hover {
 
 #navMobileContainer ul {
   list-style-type: none;
-  font-size: 2em;
-  padding: 5%;
+  font-size: 1.75em;
 }
 
 #navMobileContainer {
@@ -150,18 +147,44 @@ nav a:hover {
   font-size: 110%;
 }
 
-/************************** Essentials **************************/
-.bgimg {
+/************************** All sections **************************/
+#popGrowth, #urban, #consum, #solns {
+  padding-top: 3em;
+}
+
+#essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer {
+  padding: 0 5%;
+}
+
+/************************** essen **************************/
+.parallax {
+  background-image: url("../images/billboard-buildings.jpg");
+  height: 100%;
+  /* create the parallax scrolling effect */
+  background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
 }
 
-#essentials {
+#title {
   background-color: lightblue;
+  padding: 0 2em;
+  border-radius: 10px;
+  position: absolute;
+  display: block;
+  top: -500px;
+  width: 80%;
 }
 
-/************************** Population Growth **************************/
+#essenContainer {
+  background-color: #E5E5E5;
+  box-shadow: 0 10px 20px #C0C0C0;
+  transform: translate(0, -5px);
+  box-shadow: none;
+}
+
+/************************** pop Growth **************************/
 text {
   font-family: Garamond;
 }
@@ -184,12 +207,17 @@ text {
     font-size: 108%;
   }
 
+  #essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer {
+    padding: 0 8%;
+  }
+
   #navFlexContainer {
     display: flex;
     justify-content: space-around;
     position: fixed;
     width: 100%;
     z-index: 1;
+    padding: 1px;
   }
 
   nav a {
@@ -199,7 +227,7 @@ text {
   }
 
   .navItem {
-    padding: 25px;
+    padding: 15px;
   }
 
   #navMobile {
@@ -211,5 +239,9 @@ text {
 @media only screen and (min-width:60em) {
   body {
     font-size: 115%;
+  }
+
+  #essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer {
+    padding: 0 10%;
   }
 }
