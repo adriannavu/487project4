@@ -15,6 +15,7 @@ h1, h2, h3, p, ul {
   color: black;
   width: 100%;
   font-weight: 200;
+  margin: 0;
 }
 
 h1, h2, h3 {
@@ -45,6 +46,7 @@ li {
 }
 
 ul {
+  margin: 1em 0;
   width: 80%;
   /* needed to wrap for mobile */
 }
@@ -53,7 +55,11 @@ ul {
 #navMobile {
   background-color: black;
   padding: 10px;
-  display: block;
+  position: fixed;
+  display: inline;
+  width: 100%;
+  height: auto;
+  z-index: 1;
 }
 
 #burger {
@@ -148,12 +154,23 @@ nav a:hover {
 }
 
 /************************** All sections **************************/
+#container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: white;
+}
+
+#titleContainer {
+  top: 3em;
+}
+
 #popGrowth, #urban, #consum, #solns {
   padding-top: 3em;
 }
 
 #essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer {
-  padding: 0 5%;
+  padding: 1em;
 }
 
 /************************** essen **************************/
@@ -167,20 +184,33 @@ nav a:hover {
   background-size: cover;
 }
 
-#title {
-  background-color: lightblue;
-  padding: 0 2em;
-  border-radius: 10px;
+#title, #scroll {
+  background-color: black;
+  padding: 2% 5% 5% 5%;
   position: absolute;
   display: block;
-  top: -500px;
-  width: 80%;
+  top: 100px;
+  width: 75%;
+}
+
+#title h1, #scroll h3 {
+  color: white;
+  display: inline;
+}
+
+#scroll {
+  top: 400px;
+  width: 10em;
+  padding: 0px 2em 10px 2em;
+}
+
+#arrow {
+  transform: rotate(90deg);
 }
 
 #essenContainer {
   background-color: #E5E5E5;
   box-shadow: 0 10px 20px #C0C0C0;
-  transform: translate(0, -5px);
   box-shadow: none;
 }
 
@@ -208,7 +238,7 @@ text {
   }
 
   #essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer {
-    padding: 0 8%;
+    padding: 2em 8%;
   }
 
   #navFlexContainer {

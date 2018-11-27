@@ -1,26 +1,31 @@
 console.log('scripts loaded');
 
-//nav burger
 var burger = document.getElementById('burger');
 var navMobileContainer = document.getElementById('navMobileContainer');
 var closeBtn = document.getElementById('close-button');
 var container = document.getElementById('container');
 
-//Mobile nav
+//Open mobile nav when user clicks on burger
 burger.addEventListener('click', function() {
   console.log('burger clicked');
-  navMobileContainer.style.width = '100%';
-  navMobileContainer.style.height = '55%';
+  navMobileContainer.style.width = '75%';
+  navMobileContainer.style.height = '45em';
   navMobileContainer.style.transition = '0.5s ease';
   container.style.opacity = '0.3';
 });
-
+//Close mobile nav when user clicks on 'x' button
 closeBtn.addEventListener('click', function() {
   console.log('closeBtn clicked');
   navMobileContainer.style.width = '0%';
   navMobileContainer.style.transition = '0.5s ease';
   container.style.opacity = '1';
 });
+
+function closeNavMobileContainer() {
+  container.style.opacity = '1';
+  navMobileContainer.style.width = '0%';
+  navMobileContainer.style.transition = '0.5s ease';
+}
 
 //document.getElementsByClassName returns an array of elements, so you must target a specific index of them
 //mobile
@@ -36,6 +41,7 @@ var urbanNavD = document.getElementsByClassName('urbanNav')[1];
 var consumNavD = document.getElementsByClassName('consumNav')[1];
 var solnsNavD = document.getElementsByClassName('solnsNav')[1];
 
+//remove activeNavMobile class from element (this nav menu is no longer the active one on mobile)
 function remActiveNavMobile() {
   if (essenNavM.classList.contains('activeNavMobile')) {
     essenNavM.classList.remove('activeNavMobile');
@@ -50,6 +56,7 @@ function remActiveNavMobile() {
   }
 } //close remActiveNavMobile
 
+//remove activeNavDesktop class from element (this nav menu is no longer the active one on desktop)
 function remActiveNavDesktop() {
   if (essenNavD.classList.contains('activeNavDesktop')) {
     essenNavD.classList.remove('activeNavDesktop');
@@ -64,12 +71,7 @@ function remActiveNavDesktop() {
   }
 } //close remActiveNavDesktop
 
-function closeNavMobileContainer() {
-  container.style.opacity = '1';
-  navMobileContainer.style.width = '0%';
-  navMobileContainer.style.transition = '0.5s ease';
-} //close closeNavMobileContainer
-
+//if Essentials menu option is clicked, remove activeNavMobile from all other menu options and add it to Essentials
 essenNavM.addEventListener('click', function() {
   console.log('essenNavM clicked');
   remActiveNavMobile();
@@ -77,6 +79,7 @@ essenNavM.addEventListener('click', function() {
   closeNavMobileContainer();
 });
 
+//if Population Growth menu option is clicked, remove activeNavMobile from all other menu options and add it to Population Growth
 popGrowthNavM.addEventListener('click', function() {
   console.log('popGrowthNavM clicked');
   remActiveNavMobile();
@@ -84,6 +87,7 @@ popGrowthNavM.addEventListener('click', function() {
   closeNavMobileContainer();
 });
 
+//if Urbanization menu option is clicked, remove activeNavMobile from all other menu options and add it to Urbanization
 urbanNavM.addEventListener('click', function() {
   console.log('urbanNavM clicked');
   remActiveNavMobile();
@@ -91,6 +95,7 @@ urbanNavM.addEventListener('click', function() {
   closeNavMobileContainer();
 });
 
+//if Consumption menu option is clicked, remove activeNavMobile from all other menu options and add it to consumption
 consumNavM.addEventListener('click', function() {
   console.log('consumNavM clicked');
   remActiveNavMobile();
@@ -98,6 +103,7 @@ consumNavM.addEventListener('click', function() {
   closeNavMobileContainer();
 });
 
+//if Solutions menu option is clicked, remove activeNavMobile from all other menu options and add it to Soltions
 solnsNavM.addEventListener('click', function() {
   console.log('solnsNavM clicked');
   remActiveNavMobile();
@@ -105,39 +111,35 @@ solnsNavM.addEventListener('click', function() {
   closeNavMobileContainer();
 });
 
+//same as lines 80-117, but for desktop instead of mobile
 essenNavD.addEventListener('click', function() {
   console.log('essenNavD clicked');
   remActiveNavDesktop();
   essenNavD.classList.add('activeNavDesktop');
-  container.style.opacity = '1';
 });
 
 popGrowthNavD.addEventListener('click', function() {
   console.log('popGrowthNavD clicked');
   remActiveNavDesktop();
   popGrowthNavD.classList.add('activeNavDesktop');
-  container.style.opacity = '1';
 });
 
 urbanNavD.addEventListener('click', function() {
   console.log('urbanNavD clicked');
   remActiveNavDesktop();
   urbanNavD.classList.add('activeNavDesktop');
-  container.style.opacity = '1';
 });
 
 consumNavD.addEventListener('click', function() {
   console.log('consumNavD clicked');
   remActiveNavDesktop();
   consumNavD.classList.add('activeNavDesktop');
-  container.style.opacity = '1';
 });
 
 solnsNavD.addEventListener('click', function() {
   console.log('solnsNavD clicked');
   remActiveNavDesktop();
   solnsNavD.classList.add('activeNavDesktop');
-  container.style.opacity = '1';
 });
 
 //line graph

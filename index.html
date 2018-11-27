@@ -18,7 +18,7 @@
       <i id="close-button" class="far fa-times-circle"></i>
       <ul>
         <li>
-          <a class="navItem essenNav activeNavMobile" href="#">Essentials</a>
+          <a class="navItem essenNav activeNavMobile" href="#essen">Essentials</a>
         </li>
         <li>
           <a class="navItem popGrowthNav" href="#popGrowth">Population Growth</a>
@@ -38,7 +38,7 @@
 
   <!-- Nav desktop version -->
   <nav id="navFlexContainer">
-    <a class="navItem essenNav activeNavDesktop" href="#">Essentials</a>
+    <a class="navItem essenNav activeNavDesktop" href="#essen">Essentials</a>
     <a class="navItem popGrowthNav" href="#popGrowth">Population Growth</a>
     <a class="navItem urbanNav" href="#urban">Urbanization</a>
     <a class="navItem consumNav" href="#consum">Consumption</a>
@@ -46,76 +46,84 @@
   </nav>
 
   <div class="parallax">
-  </div>
-
-  <div id="container">
-    <section id="essen">
-      <div id="essenContainer">
-        <div id="title">
-          <h1>Population and the Environment</h1>
-        </div>
-
-        <div id="intro">
-          <h2>
-            Many people worry that population growth will eventually cause an environmental catastrophe. However, the problem is bigger and more complex than just counting bodies.
-            </h2>
-        </div>
-
-        <ul>
-          <li>
-            The world population is growing by approximately 74 million people per year.
-          </li>
-          <li>
-            City growth is only one of many factors influencing the environment.
-          </li>
-          <li>
-            We have consumed more resources in the last 50 years than the whole of humanity before us.
-          </li>
-        </ul>
+    <div id="titleContainer">
+      <div id="title">
+        <hr />
+        <h1>Population and the Environment</h1>
       </div>
-    </section>
 
-    <section id="popGrowth">
-      <div id="popGrowthContainer">
-        <div id="lineGraph" style="width:100%; height:400px;"></div>
-        <p>
-          The impact of so many humans on the environment takes the form of waste products as a result of consumption such as air and water pollutants, toxic materials and greenhouse gases.
-          <br />
+      <div id="scroll">
+        <hr />
+        <h3>Scroll down</h3>
+        <img id="arrow" src="images/arrow.png" alt="arrow pointing down" />
+      </div>
+      </div>
+    </div>
+
+    <div id="container">
+      <section id="essen">
+        <div id="essenContainer">
+          <div id="intro">
+            <h2>
+            Many people worry that population growth will eventually cause an environmental catastrophe. However, the problem is bigger and more complex than just counting bodies.
+          </h2>
+          </div>
+
+          <ul>
+            <li>
+              The world population is growing by approximately 74 million people per year.
+            </li>
+            <li>
+              City growth is only one of many factors influencing the environment.
+            </li>
+            <li>
+              We have consumed more resources in the last 50 years than the whole of humanity before us.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="popGrowth">
+        <div id="popGrowthContainer">
+          <div id="lineGraph" style="width:100%; height:400px;"></div>
+          <p>
+            The impact of so many humans on the environment takes the form of waste products as a result of consumption such as air and water pollutants, toxic materials and greenhouse gases.
+            <br />
           There are many factors at play. Essentially, it is what is happening within those populations—their distribution (e.g. urbanization), their composition (age, sex and income levels) and, most importantly, their consumption patterns—that are of equal, if not more importance, than just numbers. Let’s take a closer look at the issues.
         </p>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <section id="urban">
-      <div id="urbanContainer">
-        <p>
-          urbanization container
-        </p>
-      </div>
-    </section>
+      <section id="urban">
+        <div id="urbanContainer">
+          <p>
+            urbanization container
+          </p>
+        </div>
+      </section>
 
-    <section id="consum">
-      <div id="consumContainer">
-        <p>
-          consum container
-        </p>
-      </div>
-    </section>
+      <section id="consum">
+        <div id="consumContainer">
+          <p>
+            consum container
+          </p>
+        </div>
+      </section>
 
-    <section id="solns">
-      <div id="solnsContainer">
-        <p>
-          solns container
-        </p>
-      </div>
-    </section>
+      <section id="solns">
+        <div id="solnsContainer">
+          <p>
+            solns container
+          </p>
+        </div>
+      </section>
 
-  </div>
+    </div>
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="js/scripts.js"></script>
 
 </body>
 
