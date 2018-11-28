@@ -41,106 +41,129 @@ var urbanNavD = document.getElementsByClassName('urbanNav')[1];
 var consumNavD = document.getElementsByClassName('consumNav')[1];
 var solnsNavD = document.getElementsByClassName('solnsNav')[1];
 
-//remove activeNavMobile class from element (this nav menu is no longer the active one on mobile)
-function remActiveNavMobile() {
-  if (essenNavM.classList.contains('activeNavMobile')) {
-    essenNavM.classList.remove('activeNavMobile');
-  } else if (popGrowthNavM.classList.contains('activeNavMobile')) {
-    popGrowthNavM.classList.remove('activeNavMobile');
-  } else if (urbanNavM.classList.contains('activeNavMobile')) {
-    urbanNavM.classList.remove('activeNavMobile');
-  } else if (consumNavM.classList.contains('activeNavMobile')) {
-    consumNavM.classList.remove('activeNavMobile');
-  } else if (solnsNavM.classList.contains('activeNavMobile')) {
-    solnsNavM.classList.remove('activeNavMobile');
+//Select all elements that contain activeNavMobile or activeNavDesktop classes and remove these classes from selected elements
+function remAllActiveNav() {
+  $('.activeNavMobile').removeClass('activeNavMobile');
+  $('.activeNavDesktop').removeClass('activeNavDesktop');
+}
+
+function addActiveNavMobile(elem) {
+  elem.classList.add('activeNavMobile');
+}
+
+function addActiveNavDesktop(elem) {
+  elem.classList.add('activeNavDesktop');
+}
+
+function activeNav() {
+  //if Essentials menu option is clicked, remove activeNavMobile from all other menu options and add it to Essentials
+  essenNavM.addEventListener('click', function() {
+    console.log('essenNavM clicked');
+    remAllActiveNav();
+    addActiveNavMobile(this);
+    closeNavMobileContainer();
+  });
+
+  //if Population Growth menu option is clicked, remove activeNavMobile from all other menu options and add it to Population Growth
+  popGrowthNavM.addEventListener('click', function() {
+    console.log('popGrowthNavM clicked');
+    remAllActiveNav();
+    addActiveNavMobile(this);
+    closeNavMobileContainer();
+  });
+
+  //if Urbanization menu option is clicked, remove activeNavMobile from all other menu options and add it to Urbanization
+  urbanNavM.addEventListener('click', function() {
+    console.log('urbanNavM clicked');
+    remAllActiveNav();
+    addActiveNavMobile(this);
+    closeNavMobileContainer();
+  });
+
+  //if Consumption menu option is clicked, remove activeNavMobile from all other menu options and add it to consumption
+  consumNavM.addEventListener('click', function() {
+    console.log('consumNavM clicked');
+    $('.activeNavMobile').removeClass('activeNavMobile');
+    addActiveNavMobile(this);
+    closeNavMobileContainer();
+  });
+
+  //if Solutions menu option is clicked, remove activeNavMobile from all other menu options and add it to Soltions
+  solnsNavM.addEventListener('click', function() {
+    console.log('solnsNavM clicked');
+    remAllActiveNav();
+    addActiveNavMobile(this);
+    closeNavMobileContainer();
+  });
+
+  //same as lines 80-117, but for desktop instead of mobile
+  essenNavD.addEventListener('click', function() {
+    console.log('essenNavD clicked');
+    remAllActiveNav();
+    addActiveNavDesktop(this);
+  });
+
+  popGrowthNavD.addEventListener('click', function() {
+    console.log('popGrowthNavD clicked');
+    remAllActiveNav();
+    addActiveNavDesktop(this);
+  });
+
+  urbanNavD.addEventListener('click', function() {
+    console.log('urbanNavD clicked');
+    remAllActiveNav();
+    addActiveNavDesktop(this);
+  });
+
+  consumNavD.addEventListener('click', function() {
+    console.log('consumNavD clicked');
+    remAllActiveNav();
+    addActiveNavDesktop(this);
+  });
+
+  solnsNavD.addEventListener('click', function() {
+    console.log('solnsNavD clicked');
+    remAllActiveNav();
+    addActiveNavDesktop(this);
+  });
+}
+activeNav();
+
+//if element becomes visible in browser as user scrolls up or down, change activeNavMobile/activeNavDesktop to that element
+var scroll = function() {
+  if ($('#essen').visible(true)) {
+    console.log("#essen is visible");
+    remAllActiveNav();
+    addActiveNavMobile(essenNavM);
+    addActiveNavDesktop(essenNavD);
+
+  } else if ($('#popGrowth').visible(true)) {
+    console.log("#popGrowth is visible");
+    remAllActiveNav();
+    addActiveNavMobile(popGrowthNavM);
+    addActiveNavDesktop(popGrowthNavD);
+
+  } else if ($('#urban').visible(true)) {
+    console.log("#urban is visible");
+    remAllActiveNav();
+    addActiveNavMobile(urbanNavM);
+    addActiveNavDesktop(urbanNavD);
+
+  } else if ($('#consum').visible(true)) {
+    console.log("#consum is visible");
+    remAllActiveNav();
+    addActiveNavMobile(consumNavM);
+    addActiveNavDesktop(consumNavD);
+
+  } else if ($('#solns').visible(true)) {
+    console.log("#solns is visible");
+    remAllActiveNav();
+    addActiveNavMobile(solnsNavM);
+    addActiveNavDesktop(solnsNavD);
+
   }
-} //close remActiveNavMobile
-
-//remove activeNavDesktop class from element (this nav menu is no longer the active one on desktop)
-function remActiveNavDesktop() {
-  if (essenNavD.classList.contains('activeNavDesktop')) {
-    essenNavD.classList.remove('activeNavDesktop');
-  } else if (popGrowthNavD.classList.contains('activeNavDesktop')) {
-    popGrowthNavD.classList.remove('activeNavDesktop');
-  } else if (urbanNavD.classList.contains('activeNavDesktop')) {
-    urbanNavD.classList.remove('activeNavDesktop');
-  } else if (consumNavD.classList.contains('activeNavDesktop')) {
-    consumNavD.classList.remove('activeNavDesktop');
-  } else if (solnsNavD.classList.contains('activeNavDesktop')) {
-    solnsNavD.classList.remove('activeNavDesktop');
-  }
-} //close remActiveNavDesktop
-
-//if Essentials menu option is clicked, remove activeNavMobile from all other menu options and add it to Essentials
-essenNavM.addEventListener('click', function() {
-  console.log('essenNavM clicked');
-  remActiveNavMobile();
-  this.classList.add('activeNavMobile');
-  closeNavMobileContainer();
-});
-
-//if Population Growth menu option is clicked, remove activeNavMobile from all other menu options and add it to Population Growth
-popGrowthNavM.addEventListener('click', function() {
-  console.log('popGrowthNavM clicked');
-  remActiveNavMobile();
-  this.classList.add('activeNavMobile');
-  closeNavMobileContainer();
-});
-
-//if Urbanization menu option is clicked, remove activeNavMobile from all other menu options and add it to Urbanization
-urbanNavM.addEventListener('click', function() {
-  console.log('urbanNavM clicked');
-  remActiveNavMobile();
-  this.classList.add('activeNavMobile');
-  closeNavMobileContainer();
-});
-
-//if Consumption menu option is clicked, remove activeNavMobile from all other menu options and add it to consumption
-consumNavM.addEventListener('click', function() {
-  console.log('consumNavM clicked');
-  remActiveNavMobile();
-  this.classList.add('activeNavMobile');
-  closeNavMobileContainer();
-});
-
-//if Solutions menu option is clicked, remove activeNavMobile from all other menu options and add it to Soltions
-solnsNavM.addEventListener('click', function() {
-  console.log('solnsNavM clicked');
-  remActiveNavMobile();
-  this.classList.add('activeNavMobile');
-  closeNavMobileContainer();
-});
-
-//same as lines 80-117, but for desktop instead of mobile
-essenNavD.addEventListener('click', function() {
-  console.log('essenNavD clicked');
-  remActiveNavDesktop();
-  essenNavD.classList.add('activeNavDesktop');
-});
-
-popGrowthNavD.addEventListener('click', function() {
-  console.log('popGrowthNavD clicked');
-  remActiveNavDesktop();
-  popGrowthNavD.classList.add('activeNavDesktop');
-});
-
-urbanNavD.addEventListener('click', function() {
-  console.log('urbanNavD clicked');
-  remActiveNavDesktop();
-  urbanNavD.classList.add('activeNavDesktop');
-});
-
-consumNavD.addEventListener('click', function() {
-  console.log('consumNavD clicked');
-  remActiveNavDesktop();
-  consumNavD.classList.add('activeNavDesktop');
-});
-
-solnsNavD.addEventListener('click', function() {
-  console.log('solnsNavD clicked');
-  remActiveNavDesktop();
-  solnsNavD.classList.add('activeNavDesktop');
-});
+};
+setInterval(scroll, 1000);
 
 //line graph
 var data = [];
@@ -185,7 +208,7 @@ $.ajax({
   type: 'GET',
   dataType: 'json',
   data: data,
-  url: '../js/worldPop.json',
+  url: './js/worldPop.json',
   async: true,
   success: function(data) {
     console.log('data');

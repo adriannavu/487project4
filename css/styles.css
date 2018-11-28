@@ -173,7 +173,7 @@ nav a:hover {
   padding: 1em;
 }
 
-/************************** essen **************************/
+/************************** Parallax **************************/
 .parallax {
   background-image: url("../images/billboard-buildings.jpg");
   height: 100%;
@@ -208,6 +208,7 @@ nav a:hover {
   transform: rotate(90deg);
 }
 
+/************************** essen **************************/
 #essenContainer {
   background-color: #E5E5E5;
   box-shadow: 0 10px 20px #C0C0C0;
