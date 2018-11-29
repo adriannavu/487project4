@@ -9,7 +9,7 @@ body, html {
 }
 
 /************************** Text Elements **************************/
-h1, h2, h3, p, ul {
+h1, h2, h3, p, ul, a {
   line-height: 1.5;
   text-align: left;
   color: black;
@@ -166,7 +166,7 @@ nav a:hover {
 }
 
 #popGrowth, #urban, #consum, #solns {
-  padding-top: 3em;
+  padding: 1em 0;
 }
 
 #essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer {
@@ -210,18 +210,38 @@ nav a:hover {
 
 /************************** essen **************************/
 #essenContainer {
-  background-color: #E5E5E5;
+  background-color: #d2cacd;
   box-shadow: 0 10px 20px #C0C0C0;
   box-shadow: none;
 }
 
-/************************** pop Growth **************************/
+/************************** pop growth **************************/
 text {
   font-family: Garamond;
 }
 
 .highcharts-anchor {
   text-decoration: underline;
+}
+
+/************************** urban **************************/
+#urban {
+  background-color: #f47f81;
+}
+
+/* prevent from overlapping nav */
+.leaflet-top, .leaflet-bottom {
+  z-index: 0;
+}
+
+/************************** consum **************************/
+#consum {
+  background-color: #fdc574;
+}
+
+/************************** solns **************************/
+#solns {
+  background-color: #d3c9cd;
 }
 
 /************************** Responsiveness **************************/
@@ -239,7 +259,7 @@ text {
   }
 
   #essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer {
-    padding: 2em 8%;
+    padding: 3em 8%;
   }
 
   #navFlexContainer {

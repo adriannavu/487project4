@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
   <link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
 
@@ -63,12 +64,6 @@
     <div id="container">
       <section id="essen">
         <div id="essenContainer">
-          <div id="intro">
-            <h2>
-            Many people worry that population growth will eventually cause an environmental catastrophe. However, the problem is bigger and more complex than just counting bodies.
-          </h2>
-          </div>
-
           <ul>
             <li>
               The world population is growing by approximately 74 million people per year.
@@ -85,30 +80,47 @@
 
       <section id="popGrowth">
         <div id="popGrowthContainer">
+          <h2>Population Growth</h2>
           <div id="lineGraph" style="width:100%; height:400px;"></div>
           <p>
             The impact of so many humans on the environment takes the form of waste products as a result of consumption such as air and water pollutants, toxic materials and greenhouse gases.
-            <br />
-            There are many factors at play. Essentially, it is what is happening within those populations—their distribution and their consumption patterns—that are of equal, if not more importance, than just numbers.
-        </p>
+          </p>
+          <div id="intro">
+            <p>
+              Many people worry that population growth will eventually cause an environmental catastrophe. However, the problem is bigger and more complex than just counting bodies.
+            </p>
+          </div>
+          <p>
+            There are many factors at play. Essentially, it is what is happening within those populations—their <a href="#urban">distribution</a> and their <a href="#consum">consumption patterns</a> —that are of equal, if not more importance, than
+            just numbers.
+          </p>
         </div>
       </section>
 
       <section id="urban">
         <div id="urbanContainer">
+          <h2>Urbanization</h2>
           <p>
             The ways in which populations are spread across Earth has an effect on the environment. Globally, in almost every country, humans are also becoming more urbanized. In 1960 less than one third of the world’s population lived in cities.
             By 2014, that figure was 54 per cent, with a projected rise to 66 per cent by 2050.
             <br />
+            <br />
             People who live in urban areas have very different consumption patterns than residents in rural areas. Urban populations consume much more food, energy, and durable goods than rural populations. For example, urban populations have many more cars than rural populations per capita. The pressure placed on cities and their resources due to continuing growth includes pollution from additional cars, heaters, and other modern luxuries, which can cause a range of localized environmental problems. Gases and particles are released the air, such as from car tailpipes, building heat sources, and power plants, decreasing the air quality of these cities.
           </p>
+            <br />
+            <br />
+              View real-time Air Quality index of cities. <a href="http://aqicn.org/scale/">This table  defines the Air Quality Index scale as defined by the US-EPA 2016 standard</a>.
+            <div id='map' style='height:380px;'></div>
+
         </div>
       </section>
 
       <section id="consum">
         <div id="consumContainer">
+          <h2>Consumption</h2>
           <p>
             While poverty and environmental degradation are closely interrelated, it is the unsustainable patterns of consumption and production, primarily in developed nations, that are of even greater concern.
+            <br />
             <br />
             It’s not often that those in developed countries stop and consider our own levels of consumption. For many, particularly in industrialised countries, the consumption of goods and resources is just a part of our lives and culture, promoted not only by advertisers but also by governments wanting to continually grow their economy. Culturally, it is considered a normal part of life to shop, buy and consume, to continually strive to own a bigger home or a faster car, all frequently promoted as signs of success. It may be fine to participate in consumer culture and to value material possessions, but in excess it is harming both the planet and our emotional wellbeing.
           </p>
@@ -117,6 +129,7 @@
 
       <section id="solns">
         <div id="solnsContainer">
+          <h2>Solutions</h2>
           <p>
             Less is more. <a href="https://link.springer.com/article/10.1007%2Fs11031-013-9371-4">Studies have shown that more ‘stuff’ doesn't make people happier anyway</a>. We need to step back and re-examine what is important and actively find
             ways to reduce the amount of resources we consume. Taking shorter showers, saying no to single-use plastics, buying less, recycling our waste and reviewing our mode and frequency of travel may seem trivial, but if millions around the
@@ -132,6 +145,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="js/jquery.visible.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+    <script src="js/config.js"></script>
     <script src="js/scripts.js"></script>
 
 </body>

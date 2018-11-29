@@ -163,7 +163,7 @@ var scroll = function() {
 
   }
 };
-setInterval(scroll, 1000);
+setInterval(scroll, 500);
 
 //line graph
 var data = [];
@@ -219,3 +219,20 @@ $.ajax({
     buildLineGraph();
   } //end of success
 }); //end of ajax call
+
+//AQI map
+var aqiKey = config.aqiKey;
+var osmURL = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+var osmAttrib = '&copy;  <a  href="http://openstreetmap.org/copyright">OpenStreetMap</a>  contributors';
+var osmLayer = L.tileLayer(osmURL, {
+  attribution: osmAttrib
+});
+
+var waqiURL = "https://tiles.waqi.info/tiles/usepa-aqi/{z}/{x}/{y}.png?token=" + aqiKey;
+var waqiAttr = 'Air  Quality  Tiles  &copy;  <a  href="http://waqi.info">waqi.info</a>';
+var waqiLayer = L.tileLayer(waqiURL, {
+  attribution: waqiAttr
+});
+
+var map = L.map('map').setView([39.9042, 116.4074], 7);
+map.addLayer(osmLayer).addLayer(waqiLayer);
