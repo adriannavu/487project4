@@ -9,7 +9,7 @@ body, html {
 }
 
 /************************** Text Elements **************************/
-h1, h2, h3, p, ul, a {
+h1, h2, h3, p, ul, a, q, cite {
   line-height: 1.5;
   text-align: left;
   color: black;
@@ -18,7 +18,7 @@ h1, h2, h3, p, ul, a {
   margin: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, q, cite {
   font-family: Helvetica;
 }
 
@@ -30,9 +30,10 @@ h1 {
 h2 {
   font-size: 2em;
   font-weight: 500;
+  padding: 1em 0;
 }
 
-h3 {
+h3, q {
   font-size: 1.5em;
   font-weight: 300;
 }
@@ -51,6 +52,10 @@ ul {
   /* needed to wrap for mobile */
 }
 
+quote {
+  font-size: 2em;
+}
+
 /************************** Mobile nav **************************/
 #navMobile {
   background-color: black;
@@ -65,6 +70,7 @@ ul {
 #burger {
   color: white;
   cursor: pointer;
+  font-size: 150%;
 }
 
 .fa-times-circle:before {
@@ -167,6 +173,7 @@ nav a:hover {
 
 #popGrowth, #urban, #consum, #solns {
   padding: 1em 0;
+  position: relative;
 }
 
 #essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer {
@@ -190,7 +197,7 @@ nav a:hover {
   position: absolute;
   display: block;
   top: 100px;
-  width: 75%;
+  width: 90%;
 }
 
 #title h1, #scroll h3 {
@@ -224,9 +231,28 @@ text {
   text-decoration: underline;
 }
 
+#player {
+  position: relative;
+  display: inline-block;
+  height: 15em;
+  width: 100%;
+  margin: 1em 0 0 0;
+}
+
+#tedTalk {
+  float: left;
+  margin-right: 1em;
+}
+
+.caption {
+  font-size: 13px;
+  color: gray;
+  margin-bottom: 1em;
+}
+
 /************************** urban **************************/
 #urban {
-  background-color: #f47f81;
+  background-color: #BCDEBB;
 }
 
 /* prevent from overlapping nav */
@@ -234,9 +260,46 @@ text {
   z-index: 0;
 }
 
+.leaflet-touch .leaflet-bar a {
+  width: 40px;
+  height: 40px;
+  line-height: 35px;
+}
+
 /************************** consum **************************/
 #consum {
   background-color: #fdc574;
+}
+
+#consumQuote {
+  margin: 2em 10px 0px 3em;
+  padding: 41px 0 0;
+  position: relative;
+  line-height: 38px;
+}
+
+#consumQuote q {
+  display: block;
+  position: relative;
+}
+
+#consumQuote::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 195px;
+  height: 10px;
+  background-color: #00b16d;
+}
+
+#world {
+  text-align: right;
+}
+
+.worldIcon {
+  width: auto;
+  height: 8em;
 }
 
 /************************** solns **************************/
@@ -259,7 +322,7 @@ text {
   }
 
   #essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer {
-    padding: 3em 8%;
+    padding: 1.5em 8%;
   }
 
   #navFlexContainer {
@@ -283,6 +346,26 @@ text {
 
   #navMobile {
     display: none;
+  }
+
+  #title {
+    width: 70%;
+  }
+
+  #tedTalk {
+    width: 50%;
+  }
+
+  .caption {
+    margin-bottom: 0;
+  }
+
+  #consumQuote {
+    margin: 30px 0 0 82px;
+  }
+
+  .worldIcon {
+    height: 12em;
   }
 }
 
