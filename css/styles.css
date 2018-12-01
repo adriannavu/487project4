@@ -266,7 +266,72 @@ text {
   line-height: 35px;
 }
 
+#audio {
+  margin: 1em 0;
+}
+
+audio {
+  margin: 1em 0;
+  float: left;
+}
+
+.card {
+  min-width: 25%;
+  padding: 1em;
+  margin: 1% 2%;
+  display: flex;
+  flex-direction: column;
+  display: inline-block;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: white;
+  box-shadow: 0 10px 20px #C0C0C0;
+  /* transform: translate(0, -5px); */
+  transition: all 0.4s ease;
+}
+
+.card-content:hover {
+  box-shadow: 0 10px 20px #C0C0C0;
+  transform: translate(0, -5px);
+  transition: all 0.4s ease;
+}
+
+.card-img {
+  margin: 0;
+  align-self: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.cardDetails {
+  margin: 1em;
+}
+
+.noDec {
+  text-decoration: none;
+}
+
 /************************** consum **************************/
+#map {
+  margin: 1em;
+}
+
+.flexible {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 10px
+}
+
+.flexible .flexItem {
+  flex: 1 0 200px;
+  box-sizing: border-box;
+  margin: 2em;
+}
+
 #consum {
   background-color: #fdc574;
 }
@@ -279,8 +344,9 @@ text {
 }
 
 #consumQuote q {
-  display: block;
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 10px;
 }
 
 #consumQuote::after {
@@ -300,6 +366,10 @@ text {
 .worldIcon {
   width: auto;
   height: 8em;
+}
+
+.slideshow-container {
+  width: 100%;
 }
 
 /************************** solns **************************/
@@ -360,12 +430,30 @@ text {
     margin-bottom: 0;
   }
 
+  #audio {
+    margin: 1em;
+  }
+
+  audio {
+    margin: 1em;
+  }
+
+  .card {
+    width: 40%;
+    min-width: 1em;
+  }
+
   #consumQuote {
     margin: 30px 0 0 82px;
   }
 
-  .worldIcon {
-    height: 12em;
+  .slideshow-container {
+    width: 50%;
+    margin: 5% 0;
+  }
+
+  blockquote {
+    width: 40%;
   }
 }
 
