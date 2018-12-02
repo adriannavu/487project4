@@ -51,8 +51,10 @@ li {
 }
 
 ul {
+  font-size: 80%;
   margin: 1em 0;
   width: 80%;
+  word-wrap: break-word;
   /* needed to wrap for mobile */
 }
 
@@ -175,12 +177,12 @@ nav a:hover {
   top: 3em;
 }
 
-#popGrowth, #urban, #consum, #solns {
+#popGrowth, #urban, #consum, #solns, #sources {
   padding: 1em 0;
   position: relative;
 }
 
-#essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer {
+#essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer, #sourcesContainer {
   padding: 1em;
 }
 
@@ -407,7 +409,7 @@ audio {
     font-size: 108%;
   }
 
-  #essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer {
+  #essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer, #sourcesContainer {
     padding: 1.5em 8%;
   }
 
@@ -479,7 +481,7 @@ audio {
     font-size: 115%;
   }
 
-  #essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer {
+  #essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer, #sourcesContainer {
     padding: 0 10%;
   }
 }
