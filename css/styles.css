@@ -38,6 +38,10 @@ h3, q {
   font-weight: 300;
 }
 
+h3 {
+  margin: 1em 0;
+}
+
 p, li {
   font-size: 1em;
 }
@@ -316,6 +320,18 @@ audio {
 }
 
 /************************** consum **************************/
+.timelineContainer {
+  margin: 1em 0;
+}
+
+.timeline {
+  z-index: 0;
+}
+
+.timeline__content {
+  padding: 0 1em;
+}
+
 #map {
   margin: 1em;
 }
@@ -337,7 +353,7 @@ audio {
 }
 
 #consumQuote {
-  margin: 2em 10px 0px 3em;
+  margin: inherit;
   padding: 41px 0 0;
   position: relative;
   line-height: 38px;
@@ -444,7 +460,7 @@ audio {
   }
 
   #consumQuote {
-    margin: 30px 0 0 82px;
+    margin-left: 8%;
   }
 
   .slideshow-container {

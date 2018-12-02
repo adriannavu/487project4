@@ -267,6 +267,49 @@ $.ajax({
   } //end of success
 }); //end of ajax call
 
+//initialize timeline
+$(function() {
+  $('.timeline').timeline({
+    mode: 'horizontal',
+    forceVerticalMode: 1000, // 600px
+    verticalStartPosition: 'left', // or right
+    visibleItems: 4,
+    horizontalStartPosition: 'top', // or bottom
+    verticalTrigger: '15%',
+    moveItems: 1,
+    startIndex: 0
+  });
+});
+// $('.timeline').timeline({
+//   mode: 'horizontal'
+// });
+// $('.timeline').timeline({
+//   mode: 'horizontal',
+//   forceVerticalMode: 600 // 600px
+// });
+// $('.timeline').timeline({
+//   verticalStartPosition: 'left' // or right
+// });
+// $('.timeline').timeline({
+//   mode: 'horizontal',
+//   visibleItems: 3
+// });
+// $('.timeline').timeline({
+//   horizontalStartPosition: 'top' // or bottom
+// });
+// $('.timeline').timeline({
+//   verticalTrigger: '15%'
+// });
+// $('.timeline').timeline({
+//   verticalTrigger: '15%'
+// });
+// $('.timeline').timeline({
+//   moveItems: 1
+// });
+// $('.timeline').timeline({
+//   startIndex: 0
+// });
+
 //NASA image of earth
 var nasaKey = configNasa.nasaKey;
 var req = new XMLHttpRequest();
