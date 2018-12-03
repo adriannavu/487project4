@@ -33,7 +33,7 @@ h2 {
   padding: 1em 0;
 }
 
-h3, q {
+h3 {
   font-size: 1.5em;
   font-weight: 300;
 }
@@ -197,7 +197,7 @@ nav a:hover {
   background-size: cover;
 }
 
-#title, #scroll {
+#title {
   background-color: black;
   padding: 2% 5% 5% 5%;
   position: absolute;
@@ -206,18 +206,17 @@ nav a:hover {
   width: 87%;
 }
 
-#title h1, #scroll h3 {
+#title h1 {
   color: white;
   display: inline;
 }
 
-#scroll {
-  top: 400px;
-  width: 10em;
-  padding: 0px 2em 10px 2em;
-}
-
 #arrow {
+  width: 39px;
+  padding: 0 5%;
+  margin: auto;
+  position: relative;
+  display: block;
   transform: rotate(90deg);
 }
 
@@ -256,6 +255,10 @@ text {
   margin-bottom: 1em;
 }
 
+.caption a {
+  color: gray;
+}
+
 /************************** urban **************************/
 #urban {
   background-color: #BCDEBB;
@@ -282,21 +285,21 @@ audio {
 }
 
 #cards {
-  width: 100%;
+  width: 95%;
   display: inline-block;
   position: relative;
+  padding: 0 2%;
 }
 
 .card {
   min-width: 25%;
   padding: 1em;
-  margin: 1% 2%;
   display: flex;
   flex-direction: column;
   display: inline-block;
 }
 
-.card-content {
+.cardContent {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -306,13 +309,13 @@ audio {
   transition: all 0.4s ease;
 }
 
-.card-content:hover {
+.cardContent:hover {
   box-shadow: 0 10px 20px #C0C0C0;
   transform: translate(0, -5px);
   transition: all 0.4s ease;
 }
 
-.card-img {
+.cardImg {
   margin: 0;
   align-self: center;
   max-width: 100%;
@@ -341,7 +344,7 @@ audio {
 }
 
 #map {
-  margin: 1em;
+  margin: 1em 0;
 }
 
 .flexible {
@@ -357,7 +360,11 @@ audio {
 }
 
 #consum {
-  background-color: #fdc574;
+  background-color: black;
+}
+
+#consum h2, #consum p, #consum a, #consum cite {
+  color: #F1F1F1;
 }
 
 #consumQuote {
@@ -367,10 +374,12 @@ audio {
   line-height: 38px;
 }
 
-#consumQuote q {
+#consumQuote p {
   display: flex;
   flex-wrap: wrap;
   margin: 0 10px;
+  font-size: 1.5em;
+  font-family: Helvetica;
 }
 
 #consumQuote::after {
@@ -392,7 +401,7 @@ audio {
   height: 8em;
 }
 
-.slideshow-container {
+.slideshowContainer {
   width: 100%;
 }
 
@@ -446,6 +455,12 @@ audio {
     width: 70%;
   }
 
+  #arrow {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+  }
+
   #tedTalk {
     width: 50%;
   }
@@ -462,16 +477,20 @@ audio {
     margin: 1em;
   }
 
+  #cards {
+    padding: 0 8%;
+  }
+
   .card {
     width: 40%;
     min-width: 1em;
   }
 
   #consumQuote {
-    margin-left: 8%;
+    margin: 1em 8%;
   }
 
-  .slideshow-container {
+  .slideshowContainer {
     width: 50%;
     margin: 5% 0;
   }
