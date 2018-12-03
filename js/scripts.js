@@ -307,8 +307,8 @@ function showSlides() {
 
 //AQI map
 var aqiKey = configAqi.aqiKey;
-var osmURL = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-var osmAttrib = '&copy;  <a  href="http://openstreetmap.org/copyright">OpenStreetMap</a>  contributors';
+var osmURL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+var osmAttrib = '&copy;  <a  href="https://openstreetmap.org/copyright">OpenStreetMap</a>  contributors';
 var osmLayer = L.tileLayer(osmURL, {
   attribution: osmAttrib
 });
