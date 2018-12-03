@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link href="css/timeline.min.css" rel="stylesheet">
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
   <link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
@@ -20,7 +19,7 @@
       <i id="close-button" class="far fa-times-circle"></i>
       <ul>
         <li>
-          <a class="navItem essenNav activeNavMobile" href="#essen">Essentials</a>
+          <a class="navItem essenNav activeNavMobile" href="#essen">Intro</a>
         </li>
         <li>
           <a class="navItem popGrowthNav" href="#popGrowth">Population Growth</a>
@@ -40,7 +39,7 @@
 
   <!-- Nav desktop version -->
   <nav id="navFlexContainer">
-    <a class="navItem essenNav activeNavDesktop" href="#essen">Essentials</a>
+    <a class="navItem essenNav activeNavDesktop" href="#essen">Intro</a>
     <a class="navItem popGrowthNav" href="#popGrowth">Population Growth</a>
     <a class="navItem urbanNav" href="#urban">Urbanization</a>
     <a class="navItem consumNav" href="#consum">Consumption</a>
@@ -103,21 +102,20 @@
           <p>
             In 1960 less than one third of the world’s population lived in cities.
             By 2014, that figure was 54 percent, with a projected rise to 66 percent by 2050.
-            <br />
-                  People who live in urban areas have very different consumption patterns than residents in rural areas. Some believe urban populations consume much more food, energy, and durable goods than rural populations. You'd think so,
-                  especially
-                  looking at nighttime satellite photos that show dark landscapes illuminated by glowing urban dots. On the surface, these seem like clear evidence of city dwellers' oversized energy footprints. However, the opposite may be true.
-                </p>
-            <div id="audio">
-              <audio controls>
+            People who live in urban areas have very different consumption patterns than residents in rural areas. Some believe urban populations consume much more food, energy, and durable goods than rural populations. You'd think so,
+            especially
+            looking at nighttime satellite photos that show dark landscapes illuminated by glowing urban dots. On the surface, these seem like clear evidence of city dwellers' oversized energy footprints. However, the opposite may be true.
+          </p>
+          <div id="audio">
+            <audio controls>
                 <source src="IEEESpectrumCities.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
               </audio>
-              <p class="caption">
-                William Meyer, associate professor of geography at Colgate University and author of <a href="http://mitpress.mit.edu/books/environmental-advantages-cities">The Environmental Advantages of Cities</a>, challenges the widely held
-                assumption that urbanization and environmental quality are necessarily at odds.
-              </p>
-            </div>
+            <p class="caption">
+              William Meyer, associate professor of geography at Colgate University and author of <a href="http://mitpress.mit.edu/books/environmental-advantages-cities">The Environmental Advantages of Cities</a>, challenges the widely held
+              assumption that urbanization and environmental quality are necessarily at odds.
+            </p>
+          </div>
         </div>
         <div id="cards">
           <article class="card">
@@ -161,61 +159,8 @@
         <div id="consumContainer">
           <h2>Consumption</h2>
           <p>
-            It is the unsustainable patterns of consumption and production, primarily in developed nations, that are of greater concern. Since the 1800s and the Industrial Revolution the world has been consuming at a higher rate than ever. The
-            Revolution allowed products to be available in enormous quantities for the first time in history.
-          </p>
-          <div class="timelineContainer">
-            <h3>Timeline of American Consumerism</h3>
-            <div class="timeline">
-              <div class="timeline__wrap">
-                <div class="timeline__items">
-                  <div class="timeline__item">
-                    <div class="timeline__content">
-                      <h2>1919</h2>
-                      <p>“Buy now pay later” – This mindset began to spread when the General Motors Acceptance Corporation (GMAC) was established in 1919 and began to promote giving loans to people who bought cars. Americans started using the new
-                        credit plans on just about everything. </p>
-                    </div>
-                  </div>
-                  <div class="timeline__item">
-                    <div class="timeline__content">
-                      <h2>1925</h2>
-                      <p>Keeping up with the joneses 1925— This mentality is commonly thought to be the beginning of the American consumer culture.When GM introduced the yearly automobile model change, people began to want the latest.</p>
-                    </div>
-                  </div>
-                  <div class="timeline__item">
-                    <div class="timeline__content">
-                      <h2>1929-1945</h2>
-                      <p>1929-1945 Depression & War – Throughout WWII advertisers promised products to be available when there was peace. This led to eager customers (consumers) immediately after the war was over. </p>
-                    </div>
-                  </div>
-                  <div class="timeline__item">
-                    <div class="timeline__content">
-                      <h2>1945</h2>
-                      <p>Peace -- With the end of the war, consumer optimism and economic growth came with victory.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="timeline__item">
-                    <div class="timeline__content">
-                      <h2>1950s</h2>
-                      <p>“Charge it!” -- Credit cards were first promoted as a convenience to traveling salsemen when they were introduced by the Diners Club in the 1950s. Other companies began advertising credit cards as a time-saving device as
-                        opposed to a way to spend money that wasn't actually there.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="timeline__item">
-                    <div class="timeline__content">
-                      <h2>1970s</h2>
-                      <p>"Big is better" – In the 1970s, Congress regulated the credit card boom and banned the mass mailing of cards to those who had not requested them.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <p>
+            It is the unsustainable patterns of consumption and production, primarily in developed nations, that are of greater concern. <br />
+            <br />
             Several indicators of consumption have grown at rates well above population growth in the past century: Global GDP is 20 times higher than it was in 1900, having grown at a rate of 2.7% per annum; CO2 emissions have grown
             at an annual rate of 3.5% since 1900, reaching an all-time high of 100 million metric tons of carbon in 2001; and the ecological footprint, a composite measure of consumption measured in hectares of biologically productive
             land, grew from 4.5 to 14.1 billion hectares between 1961 and 2003, and it is now 25% more than Earth’s “biocapacity” according to <a href="https://www.wwf.or.jp/activities/data/WWF_LPR_2014.pdf">WWF's Living Plant Report</a>. In the
@@ -309,7 +254,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="js/jquery.visible.min.js"></script>
-    <script src="js/timeline.min.js"></script>
     <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
     <script src="js/config.js"></script>
     <script src="js/scripts.js"></script>

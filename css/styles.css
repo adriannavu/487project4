@@ -203,7 +203,7 @@ nav a:hover {
   position: absolute;
   display: block;
   top: 100px;
-  width: 90%;
+  width: 87%;
 }
 
 #title h1, #scroll h3 {
@@ -279,6 +279,12 @@ text {
 audio {
   margin: 1em 0;
   float: left;
+}
+
+#cards {
+  width: 100%;
+  display: inline-block;
+  position: relative;
 }
 
 .card {
@@ -481,7 +487,7 @@ audio {
     font-size: 115%;
   }
 
-  #essenContainer, #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer, #sourcesContainer {
+  #popGrowthContainer, #urbanContainer, #consumContainer, #solnsContainer, #sourcesContainer {
     padding: 0 10%;
   }
 }

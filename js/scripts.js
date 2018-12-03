@@ -131,32 +131,32 @@ activeNav();
 
 //if element becomes visible in browser as user scrolls up or down, change activeNavMobile/activeNavDesktop to that element
 var scroll = function() {
-  if ($('#essen').visible(true)) {
-    console.log("#essen is visible");
+  if ($('#essenContainer').visible(true)) {
+    console.log("#essenContainer is visible");
     remAllActiveNav();
     addActiveNavMobile(essenNavM);
     addActiveNavDesktop(essenNavD);
 
-  } else if ($('#popGrowth').visible(true)) {
-    console.log("#popGrowth is visible");
+  } else if ($('#popGrowthContainer').visible(true)) {
+    console.log("#popGrowthContainer is visible");
     remAllActiveNav();
     addActiveNavMobile(popGrowthNavM);
     addActiveNavDesktop(popGrowthNavD);
 
-  } else if ($('#urban').visible(true)) {
-    console.log("#urban is visible");
+  } else if ($('#urbanContainer').visible(true)) {
+    console.log("#urbanContainer is visible");
     remAllActiveNav();
     addActiveNavMobile(urbanNavM);
     addActiveNavDesktop(urbanNavD);
 
-  } else if ($('#consum').visible(true)) {
-    console.log("#consum is visible");
+  } else if ($('#consumContainer').visible(true)) {
+    console.log("#consumContainer is visible");
     remAllActiveNav();
     addActiveNavMobile(consumNavM);
     addActiveNavDesktop(consumNavD);
 
-  } else if ($('#solns').visible(true)) {
-    console.log("#solns is visible");
+  } else if ($('#solnsContainer').visible(true)) {
+    console.log("#solnsContainer is visible");
     remAllActiveNav();
     addActiveNavMobile(solnsNavM);
     addActiveNavDesktop(solnsNavD);
@@ -266,49 +266,6 @@ $.ajax({
     buildLineGraph();
   } //end of success
 }); //end of ajax call
-
-//initialize timeline
-$(function() {
-  $('.timeline').timeline({
-    mode: 'horizontal',
-    forceVerticalMode: 1000, // 600px
-    verticalStartPosition: 'left', // or right
-    visibleItems: 4,
-    horizontalStartPosition: 'top', // or bottom
-    verticalTrigger: '15%',
-    moveItems: 1,
-    startIndex: 0
-  });
-});
-// $('.timeline').timeline({
-//   mode: 'horizontal'
-// });
-// $('.timeline').timeline({
-//   mode: 'horizontal',
-//   forceVerticalMode: 600 // 600px
-// });
-// $('.timeline').timeline({
-//   verticalStartPosition: 'left' // or right
-// });
-// $('.timeline').timeline({
-//   mode: 'horizontal',
-//   visibleItems: 3
-// });
-// $('.timeline').timeline({
-//   horizontalStartPosition: 'top' // or bottom
-// });
-// $('.timeline').timeline({
-//   verticalTrigger: '15%'
-// });
-// $('.timeline').timeline({
-//   verticalTrigger: '15%'
-// });
-// $('.timeline').timeline({
-//   moveItems: 1
-// });
-// $('.timeline').timeline({
-//   startIndex: 0
-// });
 
 //NASA image of earth
 var nasaKey = configNasa.nasaKey;
