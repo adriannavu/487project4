@@ -264,6 +264,28 @@ text {
   background-color: #BCDEBB;
 }
 
+/* slick slider */
+.single-item {
+  text-align: center;
+  color: black;
+  background: white;
+  height: 500px;
+  width: 90%;
+  margin: auto;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+  height: inherit;
+}
+
+.slick-next:before, .slick-prev:before {
+  color: black;
+}
+
+.slick-slide {
+  background-color: beige;
+}
+
 #city {
   width: 100%;
   float: right;
@@ -283,13 +305,49 @@ text {
   line-height: 35px;
 }
 
-#audio {
-  margin: 1em 0;
+.slick-dotted.slick-slider {
+  margin: 2em auto;
+}
+
+.single-item h3, .single-item p, .single-item a {
+  width: 93%;
+  padding: 0 1em 3px 1em;
+  color: white;
+  background-color: rgb(0, 0, 0, 0.7);
+}
+
+.single-item a {
+  background: none;
+  padding: 0;
+}
+
+.single-item h3 {
+  margin: 0;
+  padding: 5px 16px 0 16px;
+}
+
+#slickSlide1, #slickSlide2, #slickSlide3 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+#slickSlide1 {
+  background-image: url("../images/city.jpg");
+}
+
+#slickSlide2 {
+  background-image: url("../images/apartment.jpeg")
+}
+
+#slickSlide3 {
+  background-image: url("../images/cityTransport.jpeg")
 }
 
 audio {
-  margin: 1em 0;
+  margin: 1em 5px;
   float: left;
+  width: 95%;
 }
 
 #cards {
@@ -477,10 +535,10 @@ audio {
   }
 
   #city {
-    width: 50%;
+    width: 100%;
   }
 
-  #audio {
+  #slickSlide4 {
     margin: 1em;
   }
 

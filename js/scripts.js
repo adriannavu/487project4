@@ -267,6 +267,12 @@ $.ajax({
   } //end of success
 }); //end of ajax call
 
+//initialize Slick slider$
+$(".single-item").slick({
+  dots: true,
+  draggable: true
+});
+
 //NASA Earth Polychromatic Imaging Camera (EPIC)
 var nasaKey = configNasa.nasaKey;
 var req = new XMLHttpRequest();

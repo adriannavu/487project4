@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
   <link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
@@ -96,29 +98,45 @@
           <p>
             In 1960 less than one third of the world’s population lived in cities.
             By 2014, that figure was 54 percent, with a projected rise to 66 percent by 2050.
-            People who live in urban areas have very different consumption patterns than residents in rural areas. Some believe urban populations consume much more food, energy, and durable goods than rural populations. You'd think so,
-            especially
-            looking at nighttime satellite photos that show dark landscapes illuminated by glowing urban dots. On the surface, these seem like clear evidence of city dwellers' oversized energy footprints. However, the opposite may be true.
-            <br />
-            <img id="city" src="images/city.jpg" alt="city lights at night" />
-            <br />
-            Cities are much more efficient in the consumption of resources, notably energy, but also materials, water, and land because of their higher densities. It’s true that they are large consumers, but the people who live in them are not. The
-            same population living in cities will wreck the environment less than that population would in a more dispersed, spread-out settlement pattern, according to some experts.
-            <br />
-            <br />
-            "Denser settlement patterns yield energy savings; apartment buildings, for example, are more efficient to heat and cool than detached suburban houses," says Richard Florida, professor in the University of Toronto’s School of Cities and Rotman School of Management. Edward Glaeser, senior fellow at Manhattan Institute,
-            <a href="https://www.city-journal.org/contributor/edward-l-glaeser_67">found that urban households emit less carbon dioxide than their suburban and rural counterparts</a>.
+            People who live in urban areas have very different consumption patterns than residents in rural areas.
           </p>
-          <div id="audio">
-            <audio controls>
-                <source src="IEEESpectrumCities.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-              </audio>
-            <p class="caption">
-              William Meyer, associate professor of geography at Colgate University and author of <a href="http://mitpress.mit.edu/books/environmental-advantages-cities">The Environmental Advantages of Cities</a>, challenges the widely held
-              assumption that urbanization and environmental quality are necessarily at odds.
-            </p>
+          <div class="single-item">
+            <div id="slickSlide1">
+              <h3>Fact or Myth?</h3>
+              <p>
+                Some believe urban populations consume much more food, energy, and durable goods than rural populations. You'd think so,
+                especially
+                looking at nighttime satellite photos that show dark landscapes illuminated by glowing urban dots. On the surface, these seem like clear evidence of city dwellers' oversized energy footprints. However, the opposite may be true.
+              </p>
+            </div>
+            <div id="slickSlide2">
+              <h3>Heat-Island Effect</h3>
+              <p>
+                "Denser settlement patterns yield energy savings; apartment buildings, for example, are more efficient to heat and cool than detached suburban houses," says Richard Florida, professor in the University of Toronto’s School of Cities
+                and Rotman School of Management. Edward Glaeser, senior fellow at Manhattan Institute,
+                <a href="https://www.city-journal.org/contributor/edward-l-glaeser_67">found that urban households emit less carbon dioxide than their suburban and rural counterparts</a>.
+              </p>
+            </div>
+            <div id="slickSlide3">
+              <h3>Energy Use Per Capita</h3>
+              <audio controls>
+                  <source src="IEEESpectrumCities.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              <p>
+                William Meyer, associate professor of geography at Colgate University and author of <a href="http://mitpress.mit.edu/books/environmental-advantages-cities">The Environmental Advantages of Cities</a>, found that urbanization reduces
+                population growth.
+                In addition, "Map total energy use and you’ll see a big peak in the urban core.
+                Map energy use per capita, and you’ll you see a big crater in the urban core," he says.
+              </p>
+            </div>
           </div>
+          <h3>City Folk Consume Less</h3>
+          <p>
+            Cities are much more efficient in the consumption of resources, notably energy, but also materials, water, and land because of their higher densities. It’s true that they are large consumers, but the people who live in them are
+            not. The
+            same population living in cities will wreck the environment less than that population would in a more dispersed, spread-out settlement pattern, according to some experts.
+          </p>
         </div>
         <div id="cards">
           <article class="card">
@@ -181,7 +199,7 @@
         </div>
         <div class="flexible">
           <blockquote id="consumQuote" class="flexItem">
-            <p>"Today humanity uses the equivalent of 1.5 planets to provide the resources we use and absorb our waste. This means it now takes the Earth one year and six months to regenerate what we use in a year.""</p>
+            <p>"Today humanity uses the equivalent of 1.5 planets to provide the resources we use and absorb our waste. This means it now takes the Earth one year and six months to regenerate what we use in a year."</p>
             <cite>  ― Global Footprint Network</cite>
           </blockquote>
           <div class="slideshowContainer flexItem">
@@ -202,10 +220,11 @@
         <div id="solnsContainer">
           <h2>Solutions</h2>
           <p>
-            Less is more. <a href="https://link.springer.com/article/10.1007%2Fs11031-013-9371-4">Studies have shown that more ‘stuff’ doesn't make people happier anyway</a>. We need to step back and re-examine what is important and actively
+            Less is more. <a href="https://link.springer.com/article/10.1007%2Fs11031-013-9371-4">Studies have shown that more ‘stuff’ doesn't make people happier anyway</a>. Taking shorter showers, saying no to single-use plastics, buying less,
+            recycling waste and reviewing our mode and frequency of travel may seem trivial. However, if millions around the
+            world begin to do it as well, the difference will begin to add up. By re-examining what is important, we can actively
             find
-            ways to reduce the amount of resources we consume. Taking shorter showers, saying no to single-use plastics, buying less, recycling our waste and reviewing our mode and frequency of travel may seem trivial, but if millions around the
-            world begin to do it as well, the difference will begin to add up.
+            ways to reduce the amount of resources we consume.
           </p>
         </div>
       </section>
@@ -214,43 +233,43 @@
         <div id="sourcesContainer">
           <h2>Sources</h2>
           <p>
-            <ul>
-              <li>https://www.science.org.au/curious/earth-environment/population-environment</li>
-              <li>
-                https://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html
+            <ol>
+              <li><a href="https://www.science.org.au/curious/earth-environment/population-environment">https://www.science.org.au/curious/earth-environment/population-environment</a></li>
+              <li><a href=
+                "https://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html">https://themasites.pbl.nl/tridion/en/themasites/hyde/basicdrivingfactors/population/index-2.html</a>
+              </li>
+              <li><a href=
+                "https://population.un.org/wpp/Download/Standard/Population/">https://population.un.org/wpp/Download/Standard/Population/</a>
               </li>
               <li>
-                https://population.un.org/wpp/Download/Standard/Population/
+                <a href="https://population.un.org/wup/">https://population.un.org/wup/</a>
               </li>
               <li>
-                https://population.un.org/wup/
+                <a href="https://link.springer.com/article/10.1007%2Fs11031-013-9371-4">https://link.springer.com/article/10.1007%2Fs11031-013-9371-4</a>
               </li>
               <li>
-                https://link.springer.com/article/10.1007%2Fs11031-013-9371-4
+                <a href="https://www.prb.org/urbanization-an-environmental-force-to-be-reckoned-with/">https://www.prb.org/urbanization-an-environmental-force-to-be-reckoned-with/</a>
               </li>
               <li>
-                https://www.prb.org/urbanization-an-environmental-force-to-be-reckoned-with/
+                <a href="https://www.epa.gov/air-trends/air-quality-national-summary">https://www.epa.gov/air-trends/air-quality-national-summary</a>
               </li>
               <li>
-                https://www.epa.gov/air-trends/air-quality-national-summary
+                <a href="https://irade.org/Consumption%20Patterns_JPKP.pdf">Jyoti K. Parikh et al., Indira Gandhi Institute of Development Research, “Consumption Patterns: The Driving Force of EnvironmentalStress” (presented at the United Nations Conference on Environment and Development, August 1991).</a>
               </li>
               <li>
-                Jyoti K. Parikh et al., Indira Gandhi Institute of Development Research, “Consumption Patterns: The Driving Force of EnvironmentalStress” (presented at the United Nations Conference on Environment and Development, August 1991).
+                <a href="http://sciences.ucf.edu/biology/king/wp-content/uploads/sites/106/2011/08/Dietz-et-al-2007.pdf">Dietz T, Rosa EA, York R. Driving the human ecological footprint. Front Ecol Environ. 2007;5(1):13–18.</a>
               </li>
               <li>
-                Dietz T, Rosa EA, York R. Driving the human ecological footprint. Front Ecol Environ. 2007;5(1):13–18.
+                <a href="https://www.millenniumassessment.org/documents/document.333.aspx.pdf">Alcamo J, van Vuuren D, Cramer W, Alder J, Bennett E, et al. Changes in ecosystem services and their drivers across the scenarios. In: Carpenter SR, Pingali PL, Bennett EM, Zurek MB, editors. Ecosystems and Human Well-being:
+                Scenarios.Washington, DC: Island; 2005. pp. 297–373.</a>
               </li>
               <li>
-                Alcamo J, van Vuuren D, Cramer W, Alder J, Bennett E, et al. Changes in ecosystem services and their drivers across the scenarios. In: Carpenter SR, Pingali PL, Bennett EM, Zurek MB, editors. Ecosystems and Human Well-being:
-                Scenarios.Washington, DC: Island; 2005. pp. 297–373.
+                <a href="https://books.google.com/books?hl=en&lr=&id=FXdNAQAAIAAJ&oi=fnd&pg=PA505&dq=In+Trends,+A+Compendium+of+Data+on+Global+Change&ots=ERlHL-smi8&sig=Hhi9sM7-wqUMoBkvZpf41FTERAE#v=onepage&q=In%20Trends%2C%20A%20Compendium%20of%20Data%20on%20Global%20Change&f=false">Marland G, Boden TA, Andres RJ. Trends: A Compendium of Data on Global Change. Oak Ridge, TN: Carbon Dioxide Inf. Anal. Cent; 2006. Global, Regional, and National CO2 Emissions.</a>
               </li>
               <li>
-                Marland G, Boden TA, Andres RJ. Trends: A Compendium of Data on Global Change. Oak Ridge, TN: Carbon Dioxide Inf. Anal. Cent; 2006. Global, Regional, and National CO2 Emissions. 
+                <a href="https://www.wwf.or.jp/activities/data/WWF_LPR_2014.pdf">Hails C, editor. The Living Planet Report 2006. Gland, Switz.: WWF Int.; 2006.</a>
               </li>
-              <li>
-                Hails C, editor. The Living Planet Report 2006. Gland, Switz.: WWF Int.; 2006.
-              </li>
-            </ul>
+            </ol>
         </div>
       </section>
     </div>
@@ -258,6 +277,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="js/jquery.visible.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
     <script src="js/config.js"></script>
     <script src="js/scripts.js"></script>
