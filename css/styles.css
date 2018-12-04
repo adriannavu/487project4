@@ -264,6 +264,14 @@ text {
   background-color: #BCDEBB;
 }
 
+#city {
+  width: 100%;
+  float: right;
+  display: inline-block;
+  position: relative;
+  margin: 1em;
+}
+
 /* prevent from overlapping nav */
 .leaflet-top, .leaflet-bottom {
   z-index: 0;
@@ -347,6 +355,10 @@ audio {
   margin: 1em 0;
 }
 
+.leaflet-control-attribution .leaflet-control {
+  color: black;
+}
+
 .flexible {
   display: flex;
   flex-wrap: wrap;
@@ -392,13 +404,8 @@ audio {
   background-color: #00b16d;
 }
 
-#world {
-  text-align: right;
-}
-
-.worldIcon {
-  width: auto;
-  height: 8em;
+.leaflet-control-zoom-in, .leaflet-control-zoom-out {
+  color: black !important;
 }
 
 .slideshowContainer {
@@ -467,6 +474,10 @@ audio {
 
   .caption {
     margin-bottom: 0;
+  }
+
+  #city {
+    width: 50%;
   }
 
   #audio {
